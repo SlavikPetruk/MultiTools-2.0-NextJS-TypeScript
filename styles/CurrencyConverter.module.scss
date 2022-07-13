@@ -1,0 +1,19 @@
+.inputCurrency {
+  margin: 150px auto;
+  max-width: 400px;
+
+  .group {
+    display: flex;
+    justify-content: space-between;
+    background: #335;
+    padding: 10px;
+    margin: 0 auto 20px;
+    position: relative;
+
+    .inputValue {
+        margin: 20px;
+        width: 30%;
+        margin-right: 20%;
+    }
+  }
+}

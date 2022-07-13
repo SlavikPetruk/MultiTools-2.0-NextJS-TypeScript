@@ -1,0 +1,52 @@
+.quizApp_container {
+    color: rgb(203, 203, 203);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.quizApp_container > p {
+    margin: 20px;
+    font-size: 25px;
+}
+
+.questions {
+    margin: 20px;
+}
+.questions > p  {
+    margin: 26px;
+}
+.questions > span  {
+    margin: 26px;
+    cursor: pointer;
+}
+
+.number {
+    font-size: 18px;
+    margin: 20px;
+}
+
+.start_btn {
+    margin-top: 150px;
+    width: 150px;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.score {
+    font-weight: 600;
+}
+
+.question > *{
+    margin: 10px;
+    font-size: 15px;
+    padding: 2px 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.next {
+    padding: 5px;
+    font-size: 20px;
+}

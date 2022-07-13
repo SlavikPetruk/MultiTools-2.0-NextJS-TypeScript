@@ -1,0 +1,101 @@
+.clock_holder {
+    width: 100%;
+    margin: 30px auto;
+    position: relative;
+}
+
+.stopwatch {
+    padding: 60px 0px;
+    text-align: center;
+}
+.watch__display {
+  width: 100%;
+  height: 140px;
+}
+
+.h__h1 {
+  position: relative;
+  font-size: 65px;
+  font-weight: 300;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 5;
+  padding: 30px 2px;
+  z-index: 7;
+  text-anchor: center;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(to right, #03a9f4, #ff05d5);
+}
+
+.h__h12:before {
+  content : '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #03dff3, #ff05d5);
+  box-shadow: -25px 15px 70px #03dff3, 25px -15px 70px #ff05d5;
+}
+.h__h12:after {
+  content : '';
+  position: absolute;
+  width: 99%;
+  height: 94%;
+  border-radius: 20px;
+  background-color: #16164a;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 6;
+  right: 0;
+  top: 3%;
+}
+.stopwatch span{
+    display: inline-block;
+    width: 106px;
+  }
+  
+  .stopwatch .stopwatch__btn {
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 30px;
+    margin-left: 5px;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 150px;
+    transition: background 1s;
+    cursor: pointer;
+  }
+  .stopwatch .stopwatch__btn_red{
+    border: 2px solid #C85454;
+    color: #C85454;
+  }
+  .stopwatch .stopwatch__btn_yel{
+    border: 2px solid #FFC900;
+    color: #FFC900;
+  }
+  
+  .stopwatch .stopwatch__btn_gre{
+    border: 2px solid #009de6;
+    color: #009de6;
+  }
+  .stopwatch .stopwatch__btn_red:hover {
+    background: #C85454;
+    border: 2px solid #C85454;
+    color: #fff;
+  }
+  .stopwatch .stopwatch__btn_yel:hover {
+    background: #FFC900;
+    border: 2px solid #FFC900;
+    color: #fff;
+  }
+  .stopwatch .stopwatch__btn_gre:hover {
+    background: #009de6;
+    border: 2px solid #009de6;
+    color: #fff;
+  }
