@@ -28,8 +28,6 @@ const CurrencyConverter: FC = () => {
 
   const format = (numb: number) => Number(numb.toFixed(2))
 
-  console.log('rates', rates)
-
   const amount1Change = (amount1: number, currency2: number, currency1: number) => {
     setAmount2(format((amount1 * rates[currency2]) / rates[currency1]))
     setAmount1(amount1)

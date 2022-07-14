@@ -13,23 +13,22 @@ export type TimeType = {
 const StopWatch:FC = () => {
     
     const [time, setTime] = useState<TimeType>({ms:0, s:0, m:0, h:0}) 
-    const [intervl, setIntervl] = useState(0)
+    const [intervl, setIntervl] = useState<NodeJS.Timer>()
     const [status, setStatus] = useState(0)
-console.log(typeof intervl)
+ 
     const start = () => {
         run()
         setIntervl(setInterval(run, 10))
         setStatus(1)
-        console.log(intervl)
     }
 
     const stop = () => {
-        clearInterval(intervl)
+        if (intervl)  clearInterval(intervl)
         setStatus(2)
     }
 
     const reset = () => {
-        clearInterval(intervl)
+        if (intervl)  clearInterval(intervl)
         setTime({ms:0, s:0, m:0, h:0})
         setStatus(0)
     }

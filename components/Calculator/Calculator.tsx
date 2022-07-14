@@ -6,7 +6,6 @@ const Calculator:FC = () => {
 
   const btnsRef = useRef<any>(null);  //useRef<HTMLInputElement(null)
   const expRef = useRef<any>(null);   //useRef<HTMLInputElement(null)
-  console.log(btnsRef)
 
   const [expression, setExpression] = useState('')
 
@@ -21,7 +20,6 @@ const Calculator:FC = () => {
 
     if (item.action  === BTN_ACTIONS.ADD) {
       addAnimSpan(item.display)
-      console.log(expression)
 
       const oper = item.display !== 'x' ? item.display : '*'
       setExpression(expression + oper)

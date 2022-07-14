@@ -1,14 +1,14 @@
 import { FC, useContext } from "react";
-import { TaskListContext, TasksType } from "./TaskListApp";
+import { TaskListContext } from "./TaskListApp";
 import styles from '../../styles/TaskManager.module.css'
+import { TasksType } from "./TaskTypes";
 
 type TasksProps = {
     task: TasksType
 }
 
-const Task = ({task}:TasksProps) => {
+const Task:FC<TasksProps> = ({task}) => {
     const {removeTask, findItem }: any = useContext(TaskListContext)
-    console.log(task.title)
   return (
       <li className={styles.list__item}>
           <span>{task.title}</span>

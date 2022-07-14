@@ -10,6 +10,6 @@ export interface TasksContextType {
   addTask?: (title: string) => void
   removeTask?: (id: string) => void
   clearTasks?: () => void
-  findList?: (id: string) => void
+  findItem?: (id: string) => void
   editTask?: (title: string, id: string) => void
 }

@@ -6,7 +6,7 @@ import { TasksContextType, TasksType } from './TaskTypes'
 
 const TaskList:FC<TasksContextType | null> = () => {
   const { tasks }: any = useContext(TaskListContext)
-  console.log('TaskList => ', tasks)
+
   return (
     <div>
       {tasks.length ? (

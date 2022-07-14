@@ -9,7 +9,7 @@ type TasksContextProviderProps = {
 export const TaskListContext = createContext<TasksContextType | null>(null)
 
 const TaskListContextProvider: FC<TasksContextProviderProps> = ({ children }) => {
-  const [editItem, setEditItem] = useState(null)
+  const [editItem, setEditItem] = useState<any>(null)
   const [tasks, setTasks] = useState([
     { title: 'hello', id: uuidv4() },
     { title: 'hi', id: uuidv4() },
@@ -30,14 +30,17 @@ const TaskListContextProvider: FC<TasksContextProviderProps> = ({ children }) =>
     localStorage.setItem('tasks', JSON.stringify(tasks))
   }, [tasks])
 
-  console.log('TaskListApp => ', tasks)
 
-  const addTask = (title: string) => setTasks([...tasks, { title, id: uuidv4() }])
+    const addTask = (title: string) => setTasks([...tasks, { title, id: uuidv4() }])
   const removeTask = (id: string) =>
     setTasks(tasks.filter((task: { id: string }) => task.id !== id))
   const clearTasks = () => setTasks([])
 
-  const findItem = (id: string): void => setEditItem(tasks.find((task) => task.id === id))
+  const findItem = (id: string) => {
+    setEditItem(
+      tasks.find(task => task.id === id)
+      )
+  }
 
   const editTask = (title: string, id: string) => {
     const newTask = tasks.map((task: TasksType) => (task.id === id ? { title, id } : task))
